@@ -1,11 +1,6 @@
 import React, {Component} from 'react';
-import NameInput from './NameInput';
 
 class NameList extends Component {
-
-  state = {
-    names: []
-  }
 
   render() {
     return (

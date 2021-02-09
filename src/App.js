@@ -1,12 +1,10 @@
-import NameInput from './Components/NameInput';
-import NameList from './Components/NameList';
+import Name from './Components/Name';
 
 const App = () => {
   return (
     <div>
     <b>Title</b>
-        <NameInput />
-        <NameList />
+        <Name />
     </div>
   );
 }
