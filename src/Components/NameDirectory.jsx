@@ -8,12 +8,12 @@ class NameDirectory extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      names: null
+      names: []
     }
   }
 
   setName = (name) => {
-    this.setState({names: name})
+    this.setState({ names: [...this.state.names, name] })
   }
 
   render() {
