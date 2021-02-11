@@ -12,13 +12,17 @@ class NameInput extends Component {
     this.setState({newName: event.target.value});
   }
 
+  submitName = (event) => {
+    this.props.getName(this.state.newName);
+    event.preventDefault();
+  }
+
   render() {
     return (
       <div>
-        <form>
-          <input type="text"
-                  placeholder="Enter a name"
-                  onChange={this.handleChange} value={this.state.newName}/>
+        <form onSubmit={this.submitName}>
+          <input type="text" placeholder="Enter a name" onChange={this.handleChange} value={this.state.newName}/>
+          <input type="submit" value="Submit"/>
         </form>
       </div>
     )

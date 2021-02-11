@@ -1,10 +1,10 @@
-import Name from './Components/Name';
+import NameDirectory from './Components/NameDirectory';
 
 const App = () => {
   return (
     <div>
     <b>Title</b>
-        <Name />
+        <NameDirectory />
     </div>
   );
 }

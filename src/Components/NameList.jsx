@@ -4,14 +4,11 @@ class NameList extends Component {
 
   render() {
     return (
-        <>
-        List component here
-        </>
-
+        <div>
+          {this.props.nameList}
+        </div>
     )
   }
-
-
 }
 
 export default NameList;
