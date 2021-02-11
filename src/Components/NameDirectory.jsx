@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Title from './Title';
 import NameInput from './NameInput';
 import NameList from './NameList';
 
@@ -18,6 +19,7 @@ class NameDirectory extends Component {
   render() {
     return (
         <div>
+          <Title/>
           <NameInput getName = {this.setName}/>
           <NameList nameList = {this.state.names}/>
         </div>
