@@ -26,7 +26,7 @@ class NameDirectory extends Component {
         <div>
           <Title/>
           <NameInput getName = {this.setName}/>
-          <NameList nameList = {this.state.names}/>
+          <NameList nameList = {this.state.names.sort()}/>
         </div>
 
     )
