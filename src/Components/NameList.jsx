@@ -5,9 +5,12 @@ class NameList extends Component {
   render() {
     return (
       <ul>
-        {this.props.nameList.map(name => {
+        {this.props.nameList.map((item, i) => {
           return (
-            <li key={name}>{name}</li>
+            <li key={i}>
+            {item.name}
+            {item.email}
+            </li>
           )
         })}
       </ul>

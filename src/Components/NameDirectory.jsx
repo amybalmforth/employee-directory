@@ -9,15 +9,20 @@ class NameDirectory extends Component {
     super(props);
     this.state = {
       names: [
-        'Amy Balmforth',
-        'Gary Balmforth',
-        'Chris Balmforth',
-        'Lin Balmforth'
+        {
+          name: 'Amy Balmforth',
+          email: 'amy@balmforth.com'
+        },
+        {
+          name: 'Gary Balmforth',
+          email: 'gary@balmforth.com'
+        }
       ]
     }
   }
 
   setName = (name) => {
+    console.log(name)
     this.setState({ names: [...this.state.names, name] })
   }
 

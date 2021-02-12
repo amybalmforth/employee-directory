@@ -4,30 +4,37 @@ class NameInput extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {newName: ''};
-    this.handleChange = this.handleChange.bind(this);
+    this.state = {name: '', email: ''};
+    this.handleNameChange = this.handleNameChange.bind(this);
+    this.handleEmailChange = this.handleEmailChange.bind(this);
   }
 
-  handleChange = (event) => {
-    this.setState({newName: event.target.value});
+  handleNameChange = (event) => {
+    this.setState({name: event.target.value});
+  }
+
+  handleEmailChange = (event) => {
+    this.setState({email: event.target.value});
   }
 
   submitName = (event) => {
-    if (!/^[a-zA-Z-'. ]+$/.test(this.state.newName)) {
+    console.log(this.state)
+    if (!/^[a-zA-Z-'. ]+$/.test(this.state.name)) {
       alert('Please enter a valid name');
       event.preventDefault();
       return
     }
-    this.props.getName(this.state.newName);
+    this.props.getName(this.state);
     event.preventDefault();
-    this.setState({newName: ''})
+    this.setState({name: '', email: ''})
   }
 
   render() {
     return (
       <div>
         <form onSubmit={this.submitName}>
-          <input id="input" type="text" placeholder="Add a new employee" onChange={this.handleChange} value={this.state.newName}/>
+          <input id="input" type="text" placeholder="Add a new employee name" onChange={this.handleNameChange} value={this.state.name}/>
+          <input id="input" type="text" placeholder="Add a new employee email" onChange={this.handleEmailChange} value={this.state.email}/>
           <input id="submit" type="submit" value="Submit"/>
         </form>
         <br></br>
