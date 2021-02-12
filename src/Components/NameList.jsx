@@ -4,13 +4,17 @@ class NameList extends Component {
 
   render() {
     return (
+      <table>
         <ul>
           {this.props.nameList.map(name => {
             return (
-              <li key={name}>{name}</li>
+              <tr>
+                <td><li key={name}>{name}</li></td>
+              </tr>
             )
           })}
         </ul>
+      </table>
     )
   }
 }

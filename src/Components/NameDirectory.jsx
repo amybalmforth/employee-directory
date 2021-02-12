@@ -8,7 +8,12 @@ class NameDirectory extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      names: []
+      names: [
+        'Amy Balmforth',
+        'Gary Balmforth',
+        'Chris Balmforth',
+        'Lin Balmforth'
+      ]
     }
   }
 

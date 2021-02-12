@@ -5,7 +5,7 @@ class Title extends Component {
   render() {
     return (
         <div>
-          <b>Employees</b>
+          <h2>Employees</h2>
         </div>
     )
   }
