@@ -13,6 +13,10 @@ class NameInput extends Component {
   }
 
   submitName = (event) => {
+    if (!/^[a-zA-Z-'. ]+$/.test(this.state.newName)) {
+      alert('Please enter a valid name');
+      return
+    }
     this.props.getName(this.state.newName);
     event.preventDefault();
     this.setState({newName: ''})
