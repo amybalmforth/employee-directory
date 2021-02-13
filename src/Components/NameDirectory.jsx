@@ -25,12 +25,23 @@ class NameDirectory extends Component {
     this.setState({ names: [...this.state.names, name] })
   }
 
+  deleteName = (name) => {
+    for (let i = 0; i < this.state.names.length; i++) {
+      if (this.state.names[i] === name) {
+        this.state.names.splice(i, 1);
+        i--;
+      }
+    }
+    this.setState({ names: this.state.names })
+  }
+
   render() {
     return (
         <div>
           <Title/>
           <NameInput getName = {this.setName}/>
-          <NameList nameList = {this.state.names.sort((a, b) => a.name.localeCompare(b.name) )}/>
+          <NameList nameList = {this.state.names.sort((a, b) => a.name.localeCompare(b.name) )}
+          deleteName = {this.deleteName}/>
         </div>
 
     )

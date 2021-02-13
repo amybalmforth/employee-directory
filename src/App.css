@@ -14,7 +14,7 @@
   border: 1px solid black;
 }
 
-#submit {
+#submit, #delete {
   background-color: black;
   border: none;
   color: white;

@@ -8,8 +8,10 @@ class NameList extends Component {
         {this.props.nameList.map((item, i) => {
           return (
             <li key={i}>
-            {item.name}
-            {item.email}
+            {item.name + ' - '}
+            {item.email + ' '}
+            <button id="delete"
+            onClick={() => this.props.deleteName(item)}>Delete</button>
             </li>
           )
         })}

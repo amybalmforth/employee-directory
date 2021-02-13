@@ -32,8 +32,8 @@ class NameInput extends Component {
     return (
       <div>
         <form onSubmit={this.submitName}>
-          <input id="input" type="text" placeholder="Add a new employee name" onChange={this.handleNameChange} value={this.state.name}/>
-          <input id="input" type="text" placeholder="Add a new employee email" onChange={this.handleEmailChange} value={this.state.email}/>
+          <input id="input" type="text" placeholder="Employee name" onChange={this.handleNameChange} value={this.state.name}/>
+          <input id="input" type="text" placeholder="Employee email" onChange={this.handleEmailChange} value={this.state.email}/>
           <input id="submit" type="submit" value="Submit"/>
         </form>
         <br></br>
