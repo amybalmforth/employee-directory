@@ -22,7 +22,6 @@ class NameDirectory extends Component {
   }
 
   setName = (name) => {
-    console.log(name)
     this.setState({ names: [...this.state.names, name] })
   }
 
@@ -31,7 +30,7 @@ class NameDirectory extends Component {
         <div>
           <Title/>
           <NameInput getName = {this.setName}/>
-          <NameList nameList = {this.state.names.sort()}/>
+          <NameList nameList = {this.state.names.sort((a, b) => a.name.localeCompare(b.name) )}/>
         </div>
 
     )

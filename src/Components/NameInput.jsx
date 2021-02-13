@@ -18,7 +18,6 @@ class NameInput extends Component {
   }
 
   submitName = (event) => {
-    console.log(this.state)
     if (!/^[a-zA-Z-'. ]+$/.test(this.state.name)) {
       alert('Please enter a valid name');
       event.preventDefault();
