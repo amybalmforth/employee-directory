@@ -1,11 +1,4 @@
-# Software Engineer Coding Exercise - Apolitical
-
 ### Instructions for setting up
-
-Clone the repository:
-```
-git clone git@gitlab.com:amybalmforth/software-engineer-2021.git
-```
 
 Install dependencies:
 ```
